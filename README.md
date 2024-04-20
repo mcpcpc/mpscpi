@@ -17,7 +17,6 @@ pip install mpremote
 
 Use mpremote and mip to install the source files.
 
-
 ```shell
 mpremote mip install github:mcpcpc/mpscpi
 ```

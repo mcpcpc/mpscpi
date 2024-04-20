@@ -1,15 +1,32 @@
 # mpscpi
 
 Instrumentation framework for network-based
-SCPI communication.
+SCPI communication in MicroPython applications.
 
 ## Installation
 
 ### Repository
 
-Using mpremote:
+Clone the repository to your local file system:
 
-```she'll
+```shell
+git clone https://github.com/mcpcpc/mpscpi.git
+cd mpscpi/
+```
+
+Create a virtual Python environment and install
+mpremote.
+
+```shell
+python3 -m venv venv
+source venv/bin/activate
+pip install mpremote
+```
+
+Use mpremote/mip to install the source files.
+
+
+```shell
 mpremote mip install github:mcpcpc/mpscpi
 ```
 
@@ -36,7 +53,7 @@ built-in callback handlers.
 
 ```micropython
 app.push("FOO", lambda a: None)
-app.pull("FOO", lambda a: "BAR")
+app.pull("FOO", lambda a: "BAR")  # returns "BAR"
 ```
 
 ### Syntax Conventions

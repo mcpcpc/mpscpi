@@ -7,15 +7,7 @@ SCPI communication in MicroPython applications.
 
 ### Repository
 
-Clone the repository to your local file system:
-
-```shell
-git clone https://github.com/mcpcpc/mpscpi.git
-cd mpscpi/
-```
-
-Create a virtual Python environment and install
-mpremote.
+If not done already install mpremote.
 
 ```shell
 python3 -m venv venv
@@ -23,7 +15,7 @@ source venv/bin/activate
 pip install mpremote
 ```
 
-Use mpremote/mip to install the source files.
+Use mpremote and mip to install the source files.
 
 
 ```shell
@@ -35,7 +27,9 @@ mpremote mip install github:mcpcpc/mpscpi
 ### Quickstart
 
 The following is a basic example of how to spin 
-up a new server instance.
+up a new server instance. Note that mpscpi
+leaves instantiation of the network interface up
+to the user.
 
 ```micropython
 from mpscpi import MPSCPI

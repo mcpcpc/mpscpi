@@ -1,17 +1,21 @@
 # mpscpi
 
-An instrumentation framework for network-based
-SCPI communication in MicroPython applications.
+An instrumentation framework for network-based SCPI
+communication in MicroPython applications.
 
 ## Background
 
 In the realm of instrumentation hardware and
 software, developers often find themselves responsible
-for implementing protocol interfacing. This library
-aims to alleviate this burden by providing a layer of
-abstraction between TCP sockets, asynchronous callback
-handlers, and SCPI command parsers. It interprets
-string-based protocol commands efficiently.
+for implementing protocol interfacing. While there are
+many proprietary solutions, most open source packages
+are either lacking in cohesiveness and/or require
+knowledge of low-level programming languages such as C
+or C++. This library aims to alleviate this burden by
+providing a layer of abstraction between TCP sockets,
+asynchronous callback handlers, and SCPI command
+parsers. It interprets string-based protocol commands
+efficiently.
 
 ## Installation
 

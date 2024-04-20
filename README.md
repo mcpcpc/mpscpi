@@ -5,14 +5,13 @@ SCPI communication in MicroPython applications.
 
 ## Background
 
-When it comes to instrumentation hardware and
-software, developers are often left to provide
-a means of protocol interfacing.  This library
-aims to ease the burden of development by
-providing a layer of abstraction between TCP
-socket, asynchronous callback handler and SCPI
-command parser to interpret string-based protocol 
-commands.  
+In the realm of instrumentation hardware and
+software, developers often find themselves responsible
+for implementing protocol interfacing. This library
+aims to alleviate this burden by providing a layer of
+abstraction between TCP sockets, asynchronous callback
+handlers, and SCPI command parsers. It interprets
+string-based protocol commands efficiently.
 
 ## Installation
 

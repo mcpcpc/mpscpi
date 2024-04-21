@@ -42,7 +42,7 @@ mpremote mip install github:mcpcpc/mpscpi
 The following is a basic example of how to spin 
 up a new server instance.
 
-```micropython
+```python
 from mpscpi import MPSCPI
 
 app = MPSCPI(__name__)
@@ -61,7 +61,7 @@ after connectivity is confirmed.
 Custom user functions are implemented using the
 built-in callback handlers.
 
-```micropython
+```python
 app.push("FOO", func=lambda a: None)
 app.pull("FOO", func=lambda a: "BAR")
 ```

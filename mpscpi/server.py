@@ -43,7 +43,7 @@ class MPSCPI:
         Find the first matching command for a given string.
         """
 
-        for command in commands.values():
+        for command in self.commands.values():
             regex = command.get("re")
             if regex.match(value):
                 return command

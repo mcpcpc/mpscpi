@@ -1,0 +1,9 @@
+{
+  "urls": [
+    ["mpscpi/__init__.py", "github:mcpcpc/mpscpi/mpscpi/__init__.py"],
+    ["mpscpi/parser.py", "github:mcpcpc/mpscpi/mpscpi/parser.py"],
+    ["mpscpi/server.py", "github:mcpcpc/mpscpi/mpscpi/server.py"]
+  ],
+  "deps": [],
+  "version": "0.0.1"
+}

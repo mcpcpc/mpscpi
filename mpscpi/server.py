@@ -3,6 +3,7 @@
 
 from asyncio import get_event_loop
 from asyncio import start_server
+from ssl import SSLContext
 
 from .parser import split_line
 from .parser import to_compiled_regex
@@ -78,15 +79,27 @@ class MPSCPI:
         writer.close()
         await writer.wait_closed()
 
-    def run(self, host: str, port: int) -> None:
+    def run(
+        self,
+        host: str,
+        port: int = 5025,
+        backlog: int = 5,
+        ssl: SSLContext = None,
+    ) -> None:
         """
-        Run asynchronous service.
+        Run asynchronous service over TCP.
         """
 
         loop = get_event_loop()
-        coro = start_server(self.callback, host, port)
+        coro = start_server(
+            self.callback,
+            host,
+            port,
+            backlog=backlog,
+            ssl=ssl,
+        )
         try:
-            print(f"Serving on: {host}")
+            print(f"Serving on: {host}:{port}")
             loop.create_task(coro)
             loop.run_forever()
         except KeyboardInterrupt:

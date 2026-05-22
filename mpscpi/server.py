@@ -83,6 +83,10 @@ class MPSCPI:
         peername = reader.get_extra_info("peername")
         print(f"Peer connected on: {peername}")
         try:
+            writer.get_extra_info("socket").setsockopt(6, 1, 1)
+        except Exception:
+            pass
+        try:
             while True:
                 message = await reader.readline()
                 if message == b"":
